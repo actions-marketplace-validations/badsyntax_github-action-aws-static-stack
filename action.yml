@@ -57,7 +57,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: actions/github-script@v5
+    - uses: actions/github-script@v6
       name: Set vars
       id: vars
       with:
@@ -115,7 +115,7 @@ runs:
         prefix: ${{ steps.vars.outputs.prefix }}
         cache-control: 'public,max-age=31536000,immutable'
 
-    - uses: actions/github-script@v5
+    - uses: actions/github-script@v6
       name: Set CloudFront Distribution Id
       id: cloudfront-distribution-id
       with:
